@@ -9,7 +9,7 @@ class LogGen:
         logging.basicConfig(filename='logginfile.log',
                             format='%(asctime)s %(levelname)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',
                             filemode='w', level=logging.INFO)
-        logger = logging.getLogger('parent1')
+        logger = logging.getLogger(__name__)
         # logger.setLevel(logging.INFO)
         return logger
 

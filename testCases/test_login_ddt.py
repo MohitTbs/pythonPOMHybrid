@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
-from utilities.customLogger import LogGen
+
 from utilities import XLUtil
 
 
@@ -10,7 +10,6 @@ class Test_002_DDT_Login:
     baseURL = ReadConfig.getApplicationURL()
     path = ".\\TestData\\testdata.xlsx"
     lst_status = []
-    logger = LogGen.loggen()
 
     def test_login_ddt(self, setup):
         self.driver = setup
